@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\Auth\AuthController;
+use App\Http\Controllers\API\Kategori\KategoriController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,5 +20,14 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('register','App\Http\Controllers\Api\Auth\AuthController@register');
-Route::post('login','App\Http\Controllers\Api\Auth\AuthController@login');
+Route::post('/register', [AuthController::class, 'register']);
+Route::post('/login', [AuthController::class, 'login']);
+
+Route::group(['prefix' => 'kategori'], function(){
+    Route::group(['middleware' => 'auth:api'], function(){
+        Route::get('/get_all', [KategoriController::class,'getAll']);
+        Route::post('/tambah', [KategoriController::class,'store']);
+        Route::post('/update', [KategoriController::class,'update']);
+        Route::post('/hapus', [KategoriController::class,'destroy']);
+    });
+});
