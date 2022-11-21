@@ -23,7 +23,7 @@ class KategoriController extends Controller
             'kode_kategori' => 'required',
             'nama_kategori' => 'required',
             'slug_kategori' => 'required',
-            'deskripsi_kategori' => 'required',
+            'deskripsi' => 'required',
         ]);  
         
         $data = new Kategori;
@@ -31,7 +31,7 @@ class KategoriController extends Controller
         $data -> kode_kategori = $request-> kode_kategori;
         $data -> nama_kategori = $request-> nama_kategori;
         $data -> slug_kategori = $request-> slug_kategori;
-        $data -> deskripsi_kategori = $request-> deskripsi_kategori;
+        $data -> deskripsi = $request-> deskripsi;
         $data->save();
         
         return response()->json($data, 201);
@@ -43,7 +43,7 @@ class KategoriController extends Controller
             'kode_kategori' => 'required',
             'nama_kategori' => 'required',
             'slug_kategori' => 'required',
-            'deskripsi_kategori' => 'required',
+            'deskripsi' => 'required',
         ]);  
         
         $data = Kategori::where('id','=', $request -> id) -> first();
@@ -51,7 +51,7 @@ class KategoriController extends Controller
         $data -> kode_kategori = $request-> kode_kategori;
         $data -> nama_kategori = $request-> nama_kategori;
         $data -> slug_kategori = $request-> slug_kategori;
-        $data -> deskripsi_kategori = $request-> deskripsi_kategori;
+        $data -> deskripsi = $request-> deskripsi;
         $data->save();
         
         return response()->json($data, 201);
