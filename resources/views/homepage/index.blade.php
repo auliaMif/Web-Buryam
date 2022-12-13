@@ -48,7 +48,12 @@
   <!-- kategori produk -->
   <div class="row mt-4">
     <div class="col col-md-12 col-sm-12 mb-4">
-      <h2 class="text-center">Kategori Produk</h2>
+      <h2 class="text-center"> 
+        <div class="Color-huruf">
+          <span><b>K</b></span>ategori <span><b>P</b></span>roduk 
+        </div>
+      </h2>
+      <hr>
     </div>
     @foreach($itemkategori as $kategori)
       <!-- kategori pertama -->
@@ -62,8 +67,8 @@
             @endif
           </a>
           <div class="card-body">
-            <a href="{{ URL::to('kategori/'.$kategori->slug_kategori) }}" class="text-decoration-none">
-              <p class="card-text">{{ $kategori->nama_kategori }}</p>
+            <a href="{{ URL::to('kategori/'.$kategori->slug_kategori) }}" class="text-decoration-none color-text">
+              <p class="card-text "> <b> {{ $kategori->nama_kategori }}</b></p>
             </a>
           </div>
         </div>
@@ -75,7 +80,8 @@
   <!-- produk Promo-->
   <div class="row mt-4">
     <div class="col col-md-12 col-sm-12 mb-4">
-      <h2 class="text-center">Promo</h2>
+      <h2 class="text-center Color-huruf"> <span><b>P</b></span>romo</h2>
+      <hr>
     </div>
     @foreach($itempromo as $promo)
       <!-- produk pertama -->
@@ -90,7 +96,7 @@
           </a>
           <div class="card-body">
             <a href="{{ URL::to('produk/'.$promo->produk->slug_produk) }}" class="text-decoration-none">
-              <p class="card-text">
+              <p class="card-text color-text ">
                 {{ $promo->produk->nama_produk }}
               </p>
             </a>
@@ -118,7 +124,8 @@
   <!-- produk Terbaru-->
   <div class="row mt-4 mb-5">
     <div class="col col-md-12 col-sm-12 mb-4">
-      <h2 class="text-center">Produk Terbaru</h2>
+      <h2 class="text-center Color-huruf"> <span><b>P</b></span>roduk  <span><b>T</b></span>erbaru</h2>
+      <hr>
     </div>
     @foreach($itemproduk as $produk)
       <!-- produk pertama -->
@@ -133,8 +140,9 @@
           </a>
             <div class="card-body">
               <a href="{{ URL::to('produk/'.$produk->slug_produk ) }}" class="text-decoration-none">
-                <p class="card-text">
+                <p class="card-text color-text"> <b>
                   {{ $produk->nama_produk }}
+                  </b>
                 </p>
               </a>
                 <div class="row mt-4">

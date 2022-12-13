@@ -42,10 +42,10 @@
               <label for="slug_kategori">Slug Kategori</label>
               <input type="text" name="slug_kategori" id="slug_kategori" class="form-control">
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label for="deskripsi_kategori">Deskripsi</label>
               <textarea name="deskripsi_kategori" id="deskripsi_kategori" cols="30" rows="5" class="form-control"></textarea>
-            </div>
+            </div> -->
             <div class="form-group">
               <button type="submit" class="btn btn-primary">Simpan</button>
               <button type="reset" class="btn btn-warning">Reset</button>

@@ -46,7 +46,7 @@ class KategoriController extends Controller
             'kode_kategori' => 'required|unique:kategori',
             'nama_kategori'=>'required',
             'slug_kategori' => 'required',
-            'deskripsi_kategori' => 'required',
+            // 'deskripsi_kategori' => 'required',
         ]);
         $itemuser = $request->user();//kita panggil data user yang sedang login
         $inputan = $request->all();//kita masukkan semua variabel data yang diinput ke variabel $inputan
@@ -97,7 +97,7 @@ class KategoriController extends Controller
         $this->validate($request, [
             'nama_kategori'=>'required',
             'slug_kategori' => 'required',
-            'deskripsi_kategori' => 'required',
+            // 'deskripsi_kategori' => 'required',
         ]);
         $itemkategori = Kategori::findOrFail($id);//cari berdasarkan id = $id, 
         // kalo ga ada error page not found 404
@@ -135,7 +135,7 @@ class KategoriController extends Controller
 
     public function uploadimage(Request $request) {
         $this->validate($request, [
-            'image' => 'required|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'required|mimes:jpeg,png,jpg,gif,svg|max:10048',
             'kategori_id' => 'required',
         ]);
         $itemuser = $request->user();

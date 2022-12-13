@@ -92,22 +92,6 @@
               <i class="fa fa-shopping-basket"></i> Beli Sekarang
               </button>
             </div>
-            <div class="card-footer">
-              <div class="row mt-4">
-                <div class="col text-center">
-                  <i class="fa fa-truck-moving"></i> 
-                  <p>Pengiriman Cepat</p>
-                </div>
-                <div class="col text-center">
-                  <i class="fa fa-calendar-week"></i> 
-                  <p>Garansi 7 hari</p>
-                </div>
-                <div class="col text-center">
-                  <i class="fa fa-money-bill"></i> 
-                  <p>Pembayaran Aman</p>
-                </div>
-              </div>            
-            </div>
           </div>
         </div>
       </div>

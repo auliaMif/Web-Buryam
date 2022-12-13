@@ -1,0 +1,23 @@
+.navbar {
+    background-color: red;
+}
+.navbar .container a {
+    color: white;
+}
+#navbarNav a{
+    color: white;
+}
+#navbarNav .logout{
+    color: white;
+    text-decoration: none;
+}
+.Color-huruf span{
+    color: red;
+}
+
+.color-text{
+    color: black;
+    text-align: center;
+    font-size: 20px;
+}
+

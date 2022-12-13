@@ -40,7 +40,7 @@ class SlideshowController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'image' => 'required|mimes:jpeg,png,jpg,gif,svg|max:2048'
+            'image' => 'required|mimes:jpeg,png,jpg,gif,svg|max:10048'
         ]);
         // ambil data user yang login
         $itemuser = $request->user();

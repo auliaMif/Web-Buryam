@@ -43,10 +43,10 @@
               <label for="slug_kategori">Slug Kategori</label>
               <input type="text" name="slug_kategori" id="slug_kategori" class="form-control" value={{ $itemkategori->slug_kategori }}>
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label for="deskripsi_kategori">Deskripsi</label>
               <textarea name="deskripsi_kategori" id="deskripsi_kategori" cols="30" rows="5" class="form-control">{{ $itemkategori->deskripsi_kategori }}</textarea>
-            </div>
+            </div> -->
             <div class="form-group">
               <label for="status">Status</label>
               <select name="status" id="status" class="form-control">
